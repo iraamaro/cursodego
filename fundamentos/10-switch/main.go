@@ -35,17 +35,20 @@ func main() {
 	case time.Saturday, time.Sunday:
 		fmt.Println("OK, você pode dormir até mais tarde.")
 	default:
-		fmt.Println("Vamos lá que é dia de trabalho")
+		fmt.Println("Vamos lá que é dia de trabalho.")
 	}
 
 	numero = 9
 	fmt.Println("Este numero cabe num dígito?")
 	switch {
-	case numero < 10:
+	case numero >= 0 && numero < 10:
 		fmt.Println("Sim")
 	case numero >= 10 && numero < 100:
 		fmt.Println("Serve dois dígitos...")
 	case numero >= 100:
-		fmt.Println("Não dá o numero é muito grande")
+		fmt.Println("Não dá o numero é muito grande.")
+	case numero < 0:
+		fmt.Println("Número é negativo.")
+
 	}
 }
