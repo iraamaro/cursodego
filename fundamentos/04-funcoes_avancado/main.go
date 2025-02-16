@@ -1,7 +1,7 @@
 package main
 
 import (
-	"03-02-funcoes_basico/calculadora"
+	"04-funcoes_avancado/calculadora"
 	"fmt"
 )
 

@@ -23,9 +23,10 @@ func Multiplicar(a, b float64) float64 {
 }
 
 // Função para divisão
-func Dividir(a, b float64) float64 {
+func Dividir(a, b float64) (resultado float64) {
 	if b != 0 {
-		return a / b
+		resultado = a / b
+		return
 	}
 	fmt.Println("Erro: Divisão por zero!")
 	return 0
