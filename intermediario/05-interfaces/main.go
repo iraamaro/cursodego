@@ -1,9 +1,8 @@
 package main
 
 import (
+	"05-interfaces/model"
 	"fmt"
-
-	"github.com/jeffprestes/cursodego/interfaces/model"
 )
 
 func queroAcordarComUmCacarejo(g model.Galinha) {
