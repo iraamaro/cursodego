@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/jeffprestes/cursodego/servidor_web/model"
+	"04-servidor-web/model"
 )
 
-//Ola é o manipulador da requisição a rota /ola
+// Ola é o manipulador da requisição a rota /ola
 func Ola(w http.ResponseWriter, r *http.Request) {
 	hora := time.Now().Format("15:04:05")
 	pagina := model.Pagina{}

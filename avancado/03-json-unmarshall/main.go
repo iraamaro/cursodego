@@ -1,13 +1,12 @@
 package main
 
 import (
+	"03-json-unmarshall/model"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"time"
-
-	"github.com/jeffprestes/cursodego/json_unmarshall/model"
 )
 
 func main() {
@@ -29,7 +28,7 @@ func main() {
 	defer resposta.Body.Close()
 
 	if resposta.StatusCode == 200 {
-		corpo, err := ioutil.ReadAll(resposta.Body)
+		corpo, err := io.ReadAll(resposta.Body)
 		if err != nil {
 			fmt.Println("[main] Erro ao ler o conteudo da pagina do Servidor. Erro: ", err.Error())
 			return

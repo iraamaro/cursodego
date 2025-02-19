@@ -1,14 +1,13 @@
 package main
 
 import (
+	"02-web-post/model"
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"time"
-
-	"github.com/jeffprestes/cursodego/web_post/model"
 )
 
 func main() {
@@ -18,7 +17,7 @@ func main() {
 
 	usuario := model.Usuario{}
 	usuario.ID = 1
-	usuario.Nome = "Jeff Prestes"
+	usuario.Nome = "Alice"
 
 	conteudoEnviar, err := json.Marshal(usuario)
 	if err != nil {
@@ -26,9 +25,10 @@ func main() {
 		return
 	}
 
-	//Visite https://postb.in , crie seu endpoint e altere na linha abaixo
-	//Obrigado Dalton Corbetta pela sugestão de atualização
-	request, err := http.NewRequest("POST", "https://postb.in/b/1588883267591-7930491962470", bytes.NewBuffer(conteudoEnviar))
+	//Visite https://requestbin.whapi.cloud , crie seu endpoint e altere na linha abaixo
+	request, err := http.NewRequest(
+		"POST", "http://requestbin.whapi.cloud/1dbcaaq1",
+		bytes.NewBuffer(conteudoEnviar))
 	if err != nil {
 		fmt.Println("[main] Erro ao criar um request para o request bin. Erro: ", err.Error())
 		return
@@ -43,7 +43,7 @@ func main() {
 	defer resposta.Body.Close()
 
 	if resposta.StatusCode == 200 {
-		corpo, err := ioutil.ReadAll(resposta.Body)
+		corpo, err := io.ReadAll(resposta.Body)
 		if err != nil {
 			fmt.Println("[main] Erro ao ler o conteudo retornado pelo request bin. Erro: ", err.Error())
 			return

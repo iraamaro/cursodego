@@ -1,10 +1,9 @@
 package main
 
 import (
+	"04-servidor-web/manipulador"
 	"fmt"
 	"net/http"
-
-	"github.com/jeffprestes/cursodego/servidor_web/manipulador"
 )
 
 func main() {
