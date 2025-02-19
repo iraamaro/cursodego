@@ -1,6 +1,7 @@
 package main
 
 import (
+	"08-goroutines/model"
 	"bufio"
 	"encoding/csv"
 	"encoding/json"
@@ -8,11 +9,8 @@ import (
 	"log"
 	"os"
 	"strings"
-	"time"
-
 	"sync"
-
-	"github.com/jeffprestes/cursodego/goroutines/model"
+	"time"
 )
 
 var orquestrador sync.WaitGroup
