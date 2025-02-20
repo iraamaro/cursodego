@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/jeffprestes/cursodego/avancado/banco_sql/manipulador"
-	"github.com/jeffprestes/cursodego/avancado/banco_sql/repo"
+	"05-banco-sql/manipulador"
+	"05-banco-sql/repo"
 )
 
 func init() {

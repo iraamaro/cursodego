@@ -7,11 +7,11 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/jeffprestes/cursodego/banco_sql/model"
-	"github.com/jeffprestes/cursodego/banco_sql/repo"
+	"05-banco-sql/model"
+	"05-banco-sql/repo"
 )
 
-//Local é o manipulador da requisição de rota /local/
+// Local é o manipulador da requisição de rota /local/
 func Local(w http.ResponseWriter, r *http.Request) {
 
 	local := model.Local{}
